@@ -1,0 +1,25 @@
+{% extends 'Registration/courses.html' %}
+
+{%block content%}
+    <h1>{{ title }}</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Syllabus Name</th>
+                <th>Active</th>
+            </tr>
+        </thead>
+      
+            {% for syllabus_item in data %}
+            <tr>
+                <td>{{ syllabus_item.id }}</td>
+                <td>{{ syllabus_item.syllabus_name }}</td>
+                <td>{{ syllabus_item.active }}</td>
+            </tr>
+            
+            {% endfor %}
+
+          
+    </table>
+    {%endblock%}
